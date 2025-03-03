@@ -25,7 +25,7 @@ The tools recommended below are fully **private** and are **open-source**. See t
 
 Breezy Weather is an Android weather app with a modern and neat interface, similar to Big Tech ones. It is highly customizable, allowing you for example to change icons and choose your preferred weather sources.
 
-The app supports [Android approximate location permision](https://developer.android.com/codelabs/approximate-location), although you might need to wait a bit or try a few times, as it first says "Location not found" when using it.
+The app supports [Android approximate location permission](https://developer.android.com/codelabs/approximate-location), although you might need to wait a bit or try a few times, as it first says "Location not found" when using it.
 
 The app comes in two different flavors, both of which are fully open-source and contain no proprietary components. The standard flavor has all of the 50 weather sources (only some sources will be available in your country), while the FreeNet one only contains sources that are libre and self-hostable, like OpenMeteo.
 
