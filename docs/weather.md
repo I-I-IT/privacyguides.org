@@ -52,7 +52,7 @@ The app gives severe weather alerts as well as precipations alerts.
 
 ![QuickWeather logo](assets/img/weather/quick.png){ align=right }
 
-QuickWeather is a no-fuss weather app that boasts being "really fast". Looking away from the name, we see a couple of nice features. The app supports the 'Approximate location' permission, which is a good middle-ground between privacy and convenience. Furthermore, the app also has a rain radar, allowing you to quickly see whether it will rain where you live.
+QuickWeather is a no-fuss weather app that boasts being "really fast". Looking away from the name, we see a couple of nice features. The app supports the "Approximate location" permission, which is a good middle-ground between privacy and convenience. Furthermore, the app also has a rain radar, allowing you to quickly see whether it will rain where you live.
 
 The app only supports  two sources : Open-Meteo and OpenWeatherMap([API key](https://home.openweathermap.org/subscriptions/unauth_subscribe/onecall_30/base) needed.)
 
