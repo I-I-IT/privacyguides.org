@@ -9,7 +9,7 @@ cover: weather.jpg
 
 - [:material-server-network: Service Providers](basics/common-threats.md#privacy-from-service-providers){ .pg-teal }
 
-**Weather apps** often ask for your location to provide accurate weather info. Often, they don't let you manually input your location. This is because the way they make money is by selling your location to third-parties.
+**Weather apps** often ask for your location to provide accurate weather info.  Often, they don't let you manually input your location.
 
 When any weather app ask for location, only grant it 'Approximate location' and select 'Only while using the app'. You can temporarily change it to "Always" if you need it for travel. If the app claim you didn't give it location access, the app is lying to you. It could be because of out-of-date knowledge of Android APIs, or because the app wants you to give it precise location access, either because it is easier for them to use this as opposed to Approximate location, or to sell the data.
 
