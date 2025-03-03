@@ -77,7 +77,7 @@ The app can give notifications about current weather, but "weather alerts" are o
 
 ![Weather Master logo](assets/img/weather/master.svg){ align=right }
 
-Weather Master is a powerful weather app with a lot of information, 15 weather sources and customisation.
+Weather Master is a powerful weather app with a lot of information, 15 weather sources and customization.
 
 The app not only informs you about the weather, but also about air pollution, air quality, UV index, pollen level, humidity level, and [more](https://github.com/PranshulGG/WeatherMaster?tab=readme-ov-file#-features). The app also has a weather radar.
 
