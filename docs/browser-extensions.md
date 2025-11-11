@@ -53,8 +53,9 @@ uBlock Origin also has a "Lite" version of their extension, which offers a very 
 
 - ...you don't want to grant full "read/modify website data" permissions to any extensions (even a trusted one like uBlock Origin)
 - ...you want a more resource (memory/CPU) efficient content blocker[^1]
-- ...your browser only supports Manifest V3 extensions
+- ...your browser only supports Manifest V3 extensions. This is the case for Chrome(1), Edge and most Chromium browsers.
 
+1. A workaround stil exists as of October 2025. See this [thread](https://github.com/uBlockOrigin/uBlock-issues/discussions/3690#discussioncomment-14548779)
 <div class="admonition recommendation" markdown>
 
 ![uBlock Origin Lite logo](assets/img/browsers/ublock_origin_lite.svg){ align=right }
@@ -77,7 +78,7 @@ uBlock Origin also has a "Lite" version of their extension, which offers a very 
 
 </div>
 
-We only recommend this version of uBlock Origin if you never want to make any changes to your filter lists, because it only supports a few pre-selected lists and offers no additional customization options, including the ability to select elements to block manually. These restrictions are due to limitations in Manifest V3's design.
+We only recommend this version of uBlock Origin if you never want to add any filter lists not included by default, or need advanced options such as [dynamic filtering](https://github.com/gorhill/ublock/wiki/dynamic-filtering:-quick-guide) and the network logger . These restrictions are due to limitations in Manifest V3's design, notably the hard limit on the number of filtering rules, and the fact that extensions cannot fetch remote resources.[^2] 
 
 This version offers three levels of blocking: "Basic" works without requiring any special privileges to view and modify site content, while the "Optimal" and "Complete" levels do require that broad permission, but offer a better filtering experience with additional cosmetic rules and scriptlet injections.
 
@@ -117,3 +118,5 @@ Additional filter lists do slow things down and may increase your attack surface
 - Must directly impact user privacy, i.e. must not simply provide information.
 
 [^1]: uBlock Origin Lite *itself* will consume no resources, because it uses newer APIs which make the browser process the filter lists natively, instead of running JavaScript code within the extension to handle the filtering. However, this resource advantage is only [theoretical](https://github.com/uBlockOrigin/uBOL-home/wiki/Frequently-asked-questions-(FAQ)#is-ubol-more-efficient-cpu--and-memory-wise-than-ubo), because it's possible that standard uBlock Origin's filtering code is more efficient than your browser's native filtering code. This has not yet been benchmarked.
+
+[^2]: This is starting to change, as extension can now use [TBC, with Adguard adding custom lists import with the Scripts API permission]
