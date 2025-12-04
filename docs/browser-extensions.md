@@ -49,13 +49,13 @@ These are some other [filter lists](https://github.com/gorhill/uBlock/wiki/Dashb
 
 ### uBlock Origin Lite
 
-uBlock Origin also has a "Lite" version of their extension, which offers a very limited feature-set compared to the original extension. However, it has a few distinct advantages over its full-fledged sibling, so you may want to consider it if...
+uBlock Origin also has a "Lite" version of their extension, which offers a limited feature-set compared to the original extension. However, it has a few distinct advantages over its full-fledged sibling, so you may want to consider it if...
 
 - ...you don't want to grant full "read/modify website data" permissions to any extensions (even a trusted one like uBlock Origin)
 - ...you want a more resource (memory/CPU) efficient content blocker[^1]
 - ...your browser only supports Manifest V3 extensions. This is the case for Chrome(1), Edge and most Chromium browsers.
 
-1. A workaround stil exists as of October 2025. See this [thread](https://github.com/uBlockOrigin/uBlock-issues/discussions/3690#discussioncomment-14548779)
+1. A workaround stil exists as of early December 2025. See this [thread](https://github.com/uBlockOrigin/uBlock-issues/discussions/3690#discussioncomment-14548779)
 <div class="admonition recommendation" markdown>
 
 ![uBlock Origin Lite logo](assets/img/browsers/ublock_origin_lite.svg){ align=right }
@@ -78,7 +78,7 @@ uBlock Origin also has a "Lite" version of their extension, which offers a very 
 
 </div>
 
-We only recommend this version of uBlock Origin if you never want to add any filter lists not included by default, or need advanced options such as [dynamic filtering](https://github.com/gorhill/ublock/wiki/dynamic-filtering:-quick-guide) and the network logger . These restrictions are due to limitations in Manifest V3's design, notably the hard limit on the number of filtering rules, and the fact that extensions cannot fetch remote resources.[^2] 
+We only recommend this version of uBlock Origin if you never want to add any filter lists not included by default, or need advanced options such as [dynamic filtering](https://github.com/gorhill/ublock/wiki/dynamic-filtering:-quick-guide) and the network logger. These restrictions are due to limitations in Manifest V3's design, notably the hard limit on the number of filtering rules, and the fact that extensions generally cannot fetch remote resources.[^2] 
 
 This version offers three levels of blocking: "Basic" works without requiring any special privileges to view and modify site content, while the "Optimal" and "Complete" levels do require that broad permission, but offer a better filtering experience with additional cosmetic rules and scriptlet injections.
 
@@ -88,7 +88,7 @@ uBlock Origin Lite only receives block list updates whenever the extension is up
 
 ### AdGuard
 
-We recommend [Safari](mobile-browsers.md#safari-ios) for iOS users, which unfortunately is not supported by uBlock Origin. Luckily, AdGuard provides an adequate alternative:
+We recommend [Safari](mobile-browsers.md#safari-ios) for iOS users, which unfortunately is only supported by uBlock Origin **Lite** . Luckily, AdGuard provides an adequate alternative:
 
 <div class="admonition recommendation" markdown>
 
@@ -119,4 +119,4 @@ Additional filter lists do slow things down and may increase your attack surface
 
 [^1]: uBlock Origin Lite *itself* will consume no resources, because it uses newer APIs which make the browser process the filter lists natively, instead of running JavaScript code within the extension to handle the filtering. However, this resource advantage is only [theoretical](https://github.com/uBlockOrigin/uBOL-home/wiki/Frequently-asked-questions-(FAQ)#is-ubol-more-efficient-cpu--and-memory-wise-than-ubo), because it's possible that standard uBlock Origin's filtering code is more efficient than your browser's native filtering code. This has not yet been benchmarked.
 
-[^2]: This is starting to change, as extension can now use [TBC, with Adguard adding custom lists import with the Scripts API permission]
+[^2]: This is starting to change, as MV3 extension can now request to use scripts. This enable AdGuard to propose to import custom filters list by the link of the filters, as opposed to manually copying the rules.
