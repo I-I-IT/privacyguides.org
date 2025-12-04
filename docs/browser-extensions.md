@@ -55,7 +55,8 @@ uBlock Origin also has a "Lite" version of their extension, which offers a limit
 - ...you want a more resource (memory/CPU) efficient content blocker[^1]
 - ...your browser only supports Manifest V3 extensions. This is the case for Chrome (1) , Edge and most Chromium browsers.
 
-1. A workaround stil exists as of early December 2025. See this [thread](https://github.com/uBlockOrigin/uBlock-issues/discussions/3690#discussioncomment-14548779)
+1. A [workaround](https://github.com/uBlockOrigin/uBlock-issues/discussions/3690#discussioncomment-14548779) stil exists as of early December 2025.
+
 <div class="admonition recommendation" markdown>
 
 ![uBlock Origin Lite logo](assets/img/browsers/ublock_origin_lite.svg){ align=right }
